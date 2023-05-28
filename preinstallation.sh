@@ -1,3 +1,4 @@
+#/bin/bash
 apt update
 apt install imagemagick -y
 chmod 744 generateGif.sh
