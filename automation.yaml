@@ -1,8 +1,0 @@
-- id: <automation.id>
-  alias: Generate AEMET image
-  trigger:
-  - minutes: /10
-    platform: time_pattern
-  condition: []
-  action:
-  - service: shell_command.aemet_rain_image
