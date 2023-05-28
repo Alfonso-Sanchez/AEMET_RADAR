@@ -14,6 +14,4 @@ sudo chmod 744 imgur.sh
 
 sudo chmod 744 execute.sh
 
-Then edit execute.sh to put your params.
-
-Execute execute.sh with root permissions.
+user GenerateGIF for create the radar gif.
