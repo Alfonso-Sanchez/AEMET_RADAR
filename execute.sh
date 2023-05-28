@@ -1,3 +1,4 @@
+#/bin/bash
 #generateGif.sh [-h] [-c province] [-d dir] -e delay -f num_images -o output_dir -- program for generating GIF from AEMET Rain Radar images
 
 #where:
