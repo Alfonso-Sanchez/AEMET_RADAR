@@ -1,5 +1,7 @@
 AEMET_RADAR BASSED ON REPOSITORIES IN GITHUB. Only for fun purposes. 
 
+CLONE ON YOUR HOME DIRECTORY ONLY.
+
 Use this commands:
 
 sudo apt update
