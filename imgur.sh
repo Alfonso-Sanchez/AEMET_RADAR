@@ -91,30 +91,8 @@ while [ $# -gt 0 ]; do
 	delete_hash="${delete_hash%%</deletehash>*}"
 	echo $url
 	echo "Delete page: https://imgur.com/delete/$delete_hash" >&2
-
-	# Append the URL to a string so we can put them all on the clipboard later
-	clip+="$url"
-	if [ $# -gt 0 ]; then
-		clip+=$'\n'
-	fi
+ 
 done
-
-# Put the URLs on the clipboard if we can
-if type pbcopy &>/dev/null; then
-	echo -n "$clip" | pbcopy $IMGUR_PBCOPY_OPTIONS
-elif type clip &>/dev/null; then
-	echo -n "$clip" | clip $IMGUR_CLIP_OPTIONS
-elif [ $DISPLAY ]; then
-	if type xsel &>/dev/null; then
-		echo -n "$clip" | xsel -i $IMGUR_XSEL_OPTIONS
-	elif type xclip &>/dev/null; then
-		echo -n "$clip" | xclip $IMGUR_XCLIP_OPTIONS
-	else
-		echo "Haven't copied to the clipboard: no xsel or xclip" >&2
-	fi
-else
-	echo "Haven't copied to the clipboard: no \$DISPLAY or pbcopy or clip" >&2
-fi
 
 if $errors; then
 	exit 1
