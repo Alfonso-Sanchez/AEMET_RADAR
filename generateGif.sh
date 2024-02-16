@@ -77,4 +77,4 @@ do
   wget -q -P $DIR_DOWNLOAD $url
 done
 convert -delay $DELAY -loop 0 -resize 150% $DIR_DOWNLOAD/*.gif $DIR_HASSIO/radar_rain.gif
-./imgur.sh radar_rain.gif
+./imgur.sh $DIR_HASSIO/radar_rain.gif
